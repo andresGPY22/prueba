@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Docentes</title>
+</head>
+<body>
+    <h1>Lista de Docentes</h1>
+    <ul>
+        {% for docente in docentes %}
+            <li>{{ docente.nombre }} {{ docente.apellido }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_docente' %}">Crear Docente</a>
+</body>
+</html>

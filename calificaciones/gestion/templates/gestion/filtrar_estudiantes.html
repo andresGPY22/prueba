@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estudiantes {{ estado }}</title>
+</head>
+<body>
+    <h1>Estudiantes {{ estado }}</h1>
+    <ul>
+        {% for estudiante in estudiantes %}
+            <li>{{ estudiante.nombre }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'listar_estudiantes' %}">Volver al listado</a>
+</body>
+</html>

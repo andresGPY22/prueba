@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promedios de Estudiantes</title>
+</head>
+<body>
+    <h1>Promedios de Estudiantes</h1>
+    <ul>
+        {% for resultado in resultados %}
+            <li>{{ resultado.estudiante.nombre }} - Promedio: {{ resultado.promedio }} - Estado: {{ resultado.estado }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'listar_estudiantes' %}">Volver al listado</a>
+</body>
+</html>
